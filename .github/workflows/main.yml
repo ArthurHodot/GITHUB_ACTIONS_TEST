@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./
       - run: |
+          ls -l
           sudo touch /home/github/test_file
           chmod 777 /tmp/test_file
           sudo echo "this is an other test bur from github action only" > /home/github/test_file
