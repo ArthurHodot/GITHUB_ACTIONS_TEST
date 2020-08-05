@@ -18,8 +18,7 @@ jobs:
         with:
           name: my-artifact
           path: |
-            /home/runner/work/_temp/_github_home/test
-            /home/github/test_file
+            /home/runner/work/_temp/_github_home/test_contained
 
   download:
     name: download
