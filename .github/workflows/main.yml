@@ -16,9 +16,10 @@ jobs:
           #sudo echo "this is an other test bur from github action only" > /home/github/test_file
       - uses: actions/upload-artifact@v2
         with:
-          name: ref
+          name: artifact_test
           path: |
             /home/runner/work/_temp/_github_home/test_contained
+            /home/github/test_file
 
   download:
     name: download
@@ -27,6 +28,6 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
       - run: |
-          ls -l /etc/usr/artifacts
+          ls -l /home/runner/work/GITHUB_ACTIONS_TEST/GITHUB_ACTIONS_TEST/ref
           #cat /home/github/ref/test
           #cat /home/github/ref/test_contained
