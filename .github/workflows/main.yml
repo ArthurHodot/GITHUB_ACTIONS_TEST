@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
+        with: 
+          name: artifact_test
       - run: |
           ls -l /home/runner/work/GITHUB_ACTIONS_TEST/GITHUB_ACTIONS_TEST/artifact_test
           #cat /home/github/ref/test
