@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ./
-      - run: cat /home/runner/work/_temp/_github_home
+      - run: cat /home/runner/work/_temp/_github_home/test
