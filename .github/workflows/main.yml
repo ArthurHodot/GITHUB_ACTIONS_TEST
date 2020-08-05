@@ -19,7 +19,7 @@ jobs:
           name: artifact_test
           path: |
             /home/runner/work/_temp/_github_home/test_contained
-            #/home/github/test_file
+            /home/github/test_file
 
   download:
     name: download
@@ -30,7 +30,7 @@ jobs:
         with: 
           name: artifact_test
       - run: |
-          ls -l
-          cat test_contained
+          ls -R
+          #cat test_contained
           #cat /home/github/ref/test
           #cat /home/github/ref/test_contained
