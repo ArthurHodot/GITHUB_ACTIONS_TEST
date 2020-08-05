@@ -14,10 +14,13 @@ jobs:
           sudo echo "this is an other test bur from github action only" > ./test_file
       - uses: actions/upload-artifact@v2
         with:
-          name: artifact_test
-          path: |
-            /home/runner/work/_temp/_github_home/test_contained
-            ./test_file
+          name: artifact_test_file
+          path: ./test_file
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact_test_contained
+          path: /home/runner/work/_temp/_github_home/test_contained
+
 
   download:
     name: download
@@ -26,7 +29,10 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with: 
-          name: artifact_test
+          name: artifact_test_file
+      - uses: actions/download-artifact@v2
+        with: 
+          name: artifact_test_contained
       - run: |
           ls -R
           #cat test_contained
