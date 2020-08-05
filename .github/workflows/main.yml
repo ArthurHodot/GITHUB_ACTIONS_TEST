@@ -11,15 +11,13 @@ jobs:
       - uses: ./
       - run: |
           ls -l
-          sudo touch /home/github/test_file
-          chmod 777 /tmp/test_file
-          sudo echo "this is an other test bur from github action only" > /home/github/test_file
+          sudo echo "this is an other test bur from github action only" > ./test_file
       - uses: actions/upload-artifact@v2
         with:
           name: artifact_test
           path: |
             /home/runner/work/_temp/_github_home/test_contained
-            /home/github/test_file
+            ./test_file
 
   download:
     name: download
