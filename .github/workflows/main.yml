@@ -26,9 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
-        with:
-          name: ref
-          path: /home/github/ref
       - run: |
+          ls -l /etc/usr/artifacts
           #cat /home/github/ref/test
-          cat /home/github/ref/test_contained
+          #cat /home/github/ref/test_contained
