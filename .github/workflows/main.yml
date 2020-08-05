@@ -35,6 +35,5 @@ jobs:
           name: artifact_test_contained
       - run: |
           ls -R
-          #cat test_contained
-          #cat /home/github/ref/test
-          #cat /home/github/ref/test_contained
+          cat test_file
+          cat test_contained
