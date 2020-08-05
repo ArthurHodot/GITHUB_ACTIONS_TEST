@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository:  ArthurHodot/Github_Actions_Private_Test
-          token: ${{ secrets.ACCESS_TOKEN_PRIVATE_PERSO }}
+          token: ${{ secrets.ACCESS_TOKEN_PIRVATE_REPOS }}
           path: private
       - uses: ./
       - run: |
