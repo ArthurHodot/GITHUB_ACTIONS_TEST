@@ -9,7 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ./
-      - run: echo "this is an other test bur from github action only" > /home/user/test
+      - run: ls -l /home
+      - run: echo "this is an other test bur from github action only" > /home/test
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
@@ -19,6 +20,7 @@ jobs:
 
   download:
     name: download
+    needs: upload
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
