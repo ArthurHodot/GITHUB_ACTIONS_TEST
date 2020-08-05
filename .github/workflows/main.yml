@@ -19,7 +19,7 @@ jobs:
           name: artifact_test
           path: |
             /home/runner/work/_temp/_github_home/test_contained
-            /home/github/test_file
+            #/home/github/test_file
 
   download:
     name: download
