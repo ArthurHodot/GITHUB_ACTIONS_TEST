@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./
       
-      - run:  echo "this is an other test bur from github action only" > /temp/test
+      - run:  sudo echo "this is an other test bur from github action only" > /temp/test
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
