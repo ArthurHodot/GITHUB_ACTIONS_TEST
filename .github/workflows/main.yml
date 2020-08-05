@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: artifact_private
-          path: ./private/private_message
+          path: private/private_message
 
   download:
     name: download
