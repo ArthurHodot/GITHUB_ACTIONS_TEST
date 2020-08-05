@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: artifact_private
-          path: private/private_message
+          path: private/priavte_message
 
   download:
     name: download
@@ -52,4 +52,4 @@ jobs:
           ls -R
           cat test_file
           cat test_contained
-          cat private_message
+          cat priavte_message
