@@ -19,7 +19,7 @@ jobs:
           name: artifact_test
           path: |
             /home/runner/work/_temp/_github_home/test_contained
-            /home/github/test_file
+            #/home/github/test_file
 
   download:
     name: download
@@ -29,8 +29,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with: 
           name: artifact_test
-          path: /home/github  
       - run: |
-          ls -la /home/github
+          ls -l
+          #cat test_contained
           #cat /home/github/ref/test
           #cat /home/github/ref/test_contained
