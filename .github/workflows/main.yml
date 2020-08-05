@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: ./
-      - run: ls -l /home
+      - run: touch /home/test
       - run: echo "this is an other test bur from github action only" > /home/test
       - uses: actions/upload-artifact@v2
         with:
