@@ -7,25 +7,35 @@ jobs:
     name: create a text a try to export it as artifact
     runs-on: ubuntu-latest
     steps:
+      
       - uses: actions/checkout@v2
+      
       - uses: actions/checkout@v2
         with:
           repository:  ArthurHodot/Github_Actions_Private_Test
           token: ${{ secrets.ACCESS_TOKEN_PIRVATE_REPOS }}
           path: private
+      
       - uses: ./
+      
       - run: |
           ls -l private
           sudo echo "this is an other test bur from github action only" > ./test_file
+      
       - uses: actions/upload-artifact@v2
+        name: artifact_test_file
         with:
           name: artifact_test_file
           path: ./test_file
+      
       - uses: actions/upload-artifact@v2
+        name: artifact_test_contained
         with:
           name: artifact_test_contained
           path: /home/runner/work/_temp/_github_home/test_contained
+      
       - uses: actions/upload-artifact@v2
+        name: artifact_private
         with:
           name: artifact_private
           path: private/priavte_message
