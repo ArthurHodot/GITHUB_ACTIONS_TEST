@@ -29,7 +29,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with: 
           name: artifact_test
+          path: /home/github  
       - run: |
-          ls -la /home/runner/work/GITHUB_ACTIONS_TEST/GITHUB_ACTIONS_TEST/runner/work/_github_home
+          ls -la /home/github
           #cat /home/github/ref/test
           #cat /home/github/ref/test_contained
