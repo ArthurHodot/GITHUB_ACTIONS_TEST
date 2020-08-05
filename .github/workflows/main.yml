@@ -25,20 +25,31 @@ jobs:
         with:
           name: artifact_test_contained
           path: /home/runner/work/_temp/_github_home/test_contained
-
+      - uses: actions/upload-artifact@v2
+        with:
+          name: artifact_private
+          path: ./private/private_message
 
   download:
     name: download
     needs: upload
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/download-artifact@v2
         with: 
           name: artifact_test_file
+      
       - uses: actions/download-artifact@v2
         with: 
           name: artifact_test_contained
+      
+      - uses: actions/download-artifact@v2
+        with: 
+          name: artifact_private
+      
       - run: |
           ls -R
           cat test_file
           cat test_contained
+          cat private_message
