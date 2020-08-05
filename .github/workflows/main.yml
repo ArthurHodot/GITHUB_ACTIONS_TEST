@@ -15,7 +15,7 @@ jobs:
           path: private
       - uses: ./
       - run: |
-          ls -l
+          ls -l private
           sudo echo "this is an other test bur from github action only" > ./test_file
       - uses: actions/upload-artifact@v2
         with:
