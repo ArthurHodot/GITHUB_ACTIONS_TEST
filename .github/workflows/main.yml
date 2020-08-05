@@ -30,6 +30,6 @@ jobs:
         with: 
           name: artifact_test
       - run: |
-          ls -l /home/runner/work/GITHUB_ACTIONS_TEST/GITHUB_ACTIONS_TEST/artifact_test
+          ls -la /home/runner/work/GITHUB_ACTIONS_TEST/GITHUB_ACTIONS_TEST/
           #cat /home/github/ref/test
           #cat /home/github/ref/test_contained
