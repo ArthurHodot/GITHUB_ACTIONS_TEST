@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  detect tag:
+  tag:
     name: Testing tags
     runs-on: ubuntu-latest
     
@@ -20,7 +20,7 @@ jobs:
       - name: echo ref
         run: cat ref
   
-  delete tag:
+  delete_tag:
     name: download
     runs-on: ubuntu-latest
     
