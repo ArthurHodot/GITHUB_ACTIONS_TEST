@@ -4,4 +4,4 @@ on: push
   jobs:
   
     hello:
-      run: echo "Hello wordl"
+      run: echo "Hello wordl !"
