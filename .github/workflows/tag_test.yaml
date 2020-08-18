@@ -1,5 +1,7 @@
 name: Workflows for testing tags
-on: create
+  push:
+    tags:
+      - v*
 
 
 jobs:
@@ -15,4 +17,7 @@ jobs:
       
       - name: tag list
         run: git tag -l 
+
+      - name: hello
+        run: echo "Hello world !"
         
