@@ -1,5 +1,6 @@
 name: Workflows for testing tags
-on: push
+on: create
+
 
 jobs:
   
@@ -9,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - run: echo "Hello wordl !"
+      - run: echo "Hello world !"
