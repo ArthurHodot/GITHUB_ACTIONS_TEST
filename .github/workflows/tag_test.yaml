@@ -1,7 +1,12 @@
 name: Workflows for testing tags
 on: push
 
-  jobs:
+jobs:
   
-    hello:
-      run: echo "Hello wordl !"
+  hello:
+    
+    name: Testing tags
+    runs-on: ubuntu-latest
+    steps:
+
+      - run: echo "Hello wordl !"
