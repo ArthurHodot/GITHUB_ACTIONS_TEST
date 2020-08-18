@@ -1,23 +1,19 @@
 name: Workflows for testing tags
+on:
   push:
     tags:
       - v*
 
-
 jobs:
-  
   hello:
-    
     name: Testing tags
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: tag list
-        run: git tag -l 
+        run: git tag -l
 
       - name: hello
         run: echo "Hello world !"
-        
