@@ -1,0 +1,7 @@
+name: Workflows for testing tags
+on: push
+
+  jobs:
+  
+    hello:
+      run: echo "Hello wordl"
