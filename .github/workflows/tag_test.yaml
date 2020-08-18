@@ -2,7 +2,7 @@ name: Workflows for testing tags
 on:
   push:
     tags:
-      - v*
+      - tag
 
 jobs:
   hello:
