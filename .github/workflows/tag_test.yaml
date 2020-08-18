@@ -10,4 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - run: echo "Hello world !"
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - run: git tag -l 
+        
