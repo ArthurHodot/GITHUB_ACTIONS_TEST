@@ -11,12 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with: ArthurHodot/GITHUB_ACTIONS_TEST@dev
 
       - name: tag list
         run: git tag -l
 
-      - name: hello
-        run: echo "deploiement en preparation !!!"
+      - name: echo ref
+        run: cat ref
 
       - name: delete tag
         run: git push origin --delete dev_deploy
