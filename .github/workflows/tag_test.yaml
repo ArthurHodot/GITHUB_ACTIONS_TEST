@@ -2,7 +2,7 @@ name: Workflows for testing tags
 on:
   push:
     tags:
-      - tag
+      - dev_deploy
 
 jobs:
   hello:
@@ -16,4 +16,7 @@ jobs:
         run: git tag -l
 
       - name: hello
-        run: echo "Hello world !"
+        run: echo "deploiement en preparation"
+
+      - name: delete tag
+        run: git push origin --delete dev_deploy
