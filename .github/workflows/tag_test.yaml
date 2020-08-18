@@ -13,5 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - run: git tag -l 
+      - name: tag list
+        run: git tag -l 
         
