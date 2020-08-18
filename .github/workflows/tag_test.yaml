@@ -16,7 +16,7 @@ jobs:
         run: git tag -l
 
       - name: hello
-        run: echo "deploiement en preparation"
+        run: echo "deploiement en preparation !!!"
 
       - name: delete tag
         run: git push origin --delete dev_deploy
