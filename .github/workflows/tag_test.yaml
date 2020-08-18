@@ -7,7 +7,6 @@ on:
 jobs:
 
   tag:
-    name: Testing tags
     runs-on: ubuntu-latest
     
     steps:
@@ -21,10 +20,11 @@ jobs:
         run: cat ref
   
   delete_tag:
-    name: download
     runs-on: ubuntu-latest
     
     steps:
+      
+      - uses: actions/checkout@v2
 
       - name: delete tag
         run: git push origin --delete dev_deploy
